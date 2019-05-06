@@ -1,6 +1,6 @@
 class CommentsController < ApplicationController
 	before_action :authenticate_user!
-	before_action :set_comment, only: [:create, :destroy]
+	before_action :set_comment, only: [:edit, :update, :show, :destroy]
 	before_action :set_meeting
 
 	def new
@@ -8,11 +8,11 @@ class CommentsController < ApplicationController
 	end 
 
 	def create
-		@comment = @meeting.comment.create(param[:comment].permit(:reply, :meeting_id))
+		@comment = @meeting.comments.create(params[:comment].permit(:reply, :meeting_id))
 		@comment.user_id = current_user.id
 
 		respond_to do |format|
-			if @comment.save	
+			if @comment.save
 				format.html { redirect_to meeting_path(@meeting) }
 				format.js # render create.js.erb
 			else
