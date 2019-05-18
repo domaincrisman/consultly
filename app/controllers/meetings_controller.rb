@@ -1,11 +1,15 @@
 class MeetingsController < ApplicationController
-  before_action :authenticate_user!
+  before_action :authenticate_user! 
   before_action :set_meeting, only: [:show, :edit, :update, :destroy]
 
   # GET /meetings
   # GET /meetings.json
   def index
-    @meetings = current_user.meetings.all
+    if current_user.admin?
+      @meetings = M eetings.all
+    else
+      @meetings = current_user.meetings.where(user_id: current_user)
+    end
   end
 
   # GET /meetings/1
@@ -29,6 +33,26 @@ class MeetingsController < ApplicationController
     @meeting = Meeting.new(meeting_params)
     @meeting.user_id = current_user.id
 
+    token = params[:stripeToken]
+    card_brand = params[:user][:card_brand]
+    card_exp_month = params[:user][:card_exp_month]
+    card_exp_year = params[:user][:card_exp_year]
+    card_last4 = params[:user][:card_last4]
+
+    charge = Stripe::Charge.create(
+      amount: 19900,
+      currency: "usd",
+      description: "Consultly",
+      source: token
+    )
+
+    current_user.stripe_id = charge.id
+    current_user.card_brand =  card_brand
+    current_user.card_exp_month =  card_exp_month
+    current_user.card_exp_year =  card_exp_year
+    current_user.card_last4 =  card_last4
+    current_user.save!
+
     respond_to do |format|
       if @meeting.save
         format.html { redirect_to @meeting, notice: 'Meeting was successfully created.' }
@@ -38,6 +62,11 @@ class MeetingsController < ApplicationController
         format.json { render json: @meeting.errors, status: :unprocessable_entity }
       end
     end
+
+    rescue Stripe::CardError => e
+      flash.alert = e.message
+      render  action: :new
+
   end
 
   # PATCH/PUT /meetings/1
