@@ -6,7 +6,7 @@ class MeetingsController < ApplicationController
   # GET /meetings.json
   def index
     if current_user.admin?
-      @meetings = M eetings.all
+      @meetings = Meeting.all
     else
       @meetings = current_user.meetings.where(user_id: current_user)
     end
