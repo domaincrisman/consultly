@@ -3,9 +3,15 @@
   "private": true,
   "dependencies": {
     "@rails/webpacker": "3.5",
-    "tailwindcss": "^0.7.2"
+    "tailwindcss": "^0.7.2",
+    "snyk": "^1.316.1"
   },
   "devDependencies": {
     "webpack-dev-server": "2.11.2"
-  }
+  },
+  "scripts": {
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
+  },
+  "snyk": true
 }
