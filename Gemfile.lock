@@ -130,7 +130,7 @@ GEM
       mini_portile2 (~> 2.4.0)
     orm_adapter (0.5.0)
     public_suffix (3.0.3)
-    puma (3.12.1)
+    puma (3.12.6)
     rack (2.0.6)
     rack-protection (2.0.5)
       rack
@@ -256,7 +256,7 @@ DEPENDENCIES
   friendly_id (~> 5.2, >= 5.2.4)
   jbuilder (~> 2.5)
   listen (>= 3.0.5, < 3.2)
-  puma (~> 3.11)
+  puma (~> 3.12, >= 3.12.6)
   rails (~> 5.2.3)
   redis (~> 4.0)
   sass-rails (~> 5.0)
@@ -279,4 +279,4 @@ RUBY VERSION
    ruby 2.5.3p105
 
 BUNDLED WITH
-   2.0.1
+   1.17.3
