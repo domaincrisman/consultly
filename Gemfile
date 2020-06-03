@@ -69,8 +69,8 @@ gem 'tailwindcss', '~> 0.2.0'
 gem 'webpacker', '~> 3.5', '>= 3.5.3'
 
 # consultly specific
-gem 'simple_calendar', '~> 2.3'
-gem 'trix', '~> 0.9.9'
+gem 'simple_calendar', '~> 2.3', '>= 2.3.0'
+gem 'trix', '~> 0.9.10'
 gem 'stripe', '~> 4.0', '>= 4.0.2'
 
 group :development, :test do
