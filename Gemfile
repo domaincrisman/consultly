@@ -10,7 +10,7 @@ gem 'sqlite3'
 # Use Puma as the app server
 gem 'puma', '~> 3.12'
 # Use SCSS for stylesheets
-gem 'sass-rails', '~> 5.0', '>= 5.0.7'
+gem 'sass-rails', '~> 5.1', '>= 5.1.0'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
@@ -61,11 +61,11 @@ end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
-gem 'devise', '~> 4.6', '>= 4.6.2'
-gem 'friendly_id', '~> 5.2', '>= 5.2.4'
+gem 'devise', '~> 4.7', '>= 4.7.3'
+gem 'friendly_id', '~> 5.2', '>= 5.2.5'
 gem 'foreman', '~> 0.84.0'
 gem 'sidekiq', '~> 5.1', '>= 5.1.3'
-gem 'tailwindcss', '~> 0.2.0'
+gem 'tailwindcss', '~> 1.0.3'
 gem 'webpacker', '~> 3.6', '>= 3.6.0'
 
 # consultly specific
