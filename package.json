@@ -3,7 +3,7 @@
   "private": true,
   "dependencies": {
     "@rails/webpacker": "4.3.0",
-    "tailwindcss": "^0.7.2",
+    "tailwindcss": "^2.0.0",
     "snyk": "^1.434.4"
   },
   "devDependencies": {
