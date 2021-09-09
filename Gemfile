@@ -74,5 +74,5 @@ gem 'trix', '~> 0.9.10'
 gem 'stripe', '~> 4.0', '>= 4.0.2'
 
 group :development, :test do
-  gem 'better_errors'
+  gem 'better_errors', '>= 2.8.0'
 end
