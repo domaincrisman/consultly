@@ -2,7 +2,7 @@
   "name": "Consultly",
   "private": true,
   "dependencies": {
-    "@rails/webpacker": "5.2.0",
+    "@rails/webpacker": "5.2.2",
     "tailwindcss": "^2.2.0",
     "snyk": "^1.434.4"
   },
