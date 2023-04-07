@@ -64,7 +64,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'devise', '~> 4.7', '>= 4.7.3'
 gem 'friendly_id', '~> 5.2', '>= 5.2.5'
 gem 'foreman', '~> 0.84.0'
-gem 'sidekiq', '~> 5.1', '>= 5.1.3'
+gem 'sidekiq', '~> 7.0', '>= 7.0.8'
 gem 'tailwindcss', '~> 1.0.3'
 gem 'webpacker', '~> 3.6', '>= 3.6.0'
 
