@@ -4,24 +4,24 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby '2.5.3'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 6.0.3', '>= 6.0.3.5'
+gem 'rails', '~> 6.1.7', '>= 6.1.7.5'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 # Use Puma as the app server
 gem 'puma', '~> 3.12'
 # Use SCSS for stylesheets
-gem 'sass-rails', '~> 5.1', '>= 5.1.0'
+gem 'sass-rails', '~> 6.0', '>= 6.0.0'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'mini_racer', platforms: :ruby
 
 # Use CoffeeScript for .coffee assets and views
-gem 'coffee-rails', '~> 4.2', '>= 4.2.2'
+gem 'coffee-rails', '~> 5.0', '>= 5.0.0'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
 gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
-gem 'jbuilder', '~> 2.5'
+gem 'jbuilder', '~> 2.9', '>= 2.9.0'
 # Use Redis adapter to run Action Cable in production
 gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
@@ -43,10 +43,10 @@ end
 
 group :development do
   # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
-  gem 'web-console', '>= 3.7.0'
+  gem 'web-console', '>= 4.0.0'
   gem 'listen', '>= 3.0.5', '< 3.2'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
-  gem 'spring'
+  gem 'spring', '>= 2.1.0'
   gem 'spring-watcher-listen', '~> 2.0.0'
 end
 
@@ -61,16 +61,16 @@ end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
-gem 'devise', '~> 4.7', '>= 4.7.3'
-gem 'friendly_id', '~> 5.2', '>= 5.2.5'
+gem 'devise', '~> 4.8', '>= 4.8.0'
+gem 'friendly_id', '~> 5.3', '>= 5.3.0'
 gem 'foreman', '~> 0.84.0'
 gem 'sidekiq', '~> 5.1', '>= 5.1.3'
-gem 'tailwindcss', '~> 1.0.3'
-gem 'webpacker', '~> 3.6', '>= 3.6.0'
+gem 'tailwindcss', '~> 1.0.0'
+gem 'webpacker', '~> 4.0', '>= 4.0.0'
 
 # consultly specific
-gem 'simple_calendar', '~> 2.4', '>= 2.4.1'
-gem 'trix', '~> 0.9.10'
+gem 'simple_calendar', '~> 2.4', '>= 2.4.2'
+gem 'trix', '~> 0.10.0'
 gem 'stripe', '~> 4.0', '>= 4.0.2'
 
 group :development, :test do
