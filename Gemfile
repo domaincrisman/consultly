@@ -4,7 +4,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby '2.5.3'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 7.0.8', '>= 7.0.8.1'
+gem 'rails', '~> 7.1.5', '>= 7.1.5.2'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 # Use Puma as the app server
@@ -62,7 +62,7 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'devise', '~> 4.8', '>= 4.8.0'
-gem 'friendly_id', '~> 5.2', '>= 5.2.5'
+gem 'friendly_id', '~> 5.3', '>= 5.3.0'
 gem 'foreman', '~> 0.84.0'
 gem 'sidekiq', '~> 5.2', '>= 5.2.6'
 gem 'tailwindcss', '~> 1.0.0'
