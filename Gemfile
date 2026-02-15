@@ -71,7 +71,7 @@ gem 'webpacker', '~> 4.0', '>= 4.0.0'
 # consultly specific
 gem 'simple_calendar', '~> 2.4', '>= 2.4.2'
 gem 'trix', '~> 0.10.0'
-gem 'stripe', '~> 4.0', '>= 4.0.2'
+gem 'stripe', '~> 5.0', '>= 5.0.0'
 
 group :development, :test do
   gem 'better_errors', '>= 2.6.0'
